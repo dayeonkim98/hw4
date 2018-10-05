@@ -12,8 +12,9 @@ function draw() {
   x.push(mouseX); // equivalent to append(x, mouseX)
   y.push(mouseY); // equivalent to append(y, mouseY)
 
+  rectMode(CENTER);
   for (var i = 0; i < x.length; i = i + 10) {
-    rect(x[i], y[i], 1 + (x.length - i), 1 + (y.length - i));
+    rect(x[i] - , y[i], 1 + (x.length - i), 1 + (y.length - i));
   }
 
   x = x.slice(-50); // keep the last 50 x values
