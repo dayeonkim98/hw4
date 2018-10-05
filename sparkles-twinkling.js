@@ -14,7 +14,7 @@ function draw() {
     var sparkle = sparkles[i];
     
     fill(sparkle.h, random(10, 100), random(120-sparkle.frames/2, 20-sparkle.frames/4));
-    ellipse(sparkle.x, sparkle.y, random(1, 10));
+    ellipse(sparkle.x, sparkle.y, sparkle.diameter);
     
     sparkle.x = sparkle.x + sparkle.vx;
     sparkle.y = sparkle.y + sparkle.vy;
@@ -44,7 +44,8 @@ function mousePressed() {
       y: mouseY,
       vx: distance * sin(angle),
       vy: distance * cos(angle),
-      frames: 0
+      frames: 0,
+      diameter: random(10)
     });
   }
 }
